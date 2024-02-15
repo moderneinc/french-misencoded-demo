@@ -40,7 +40,7 @@ public class Person extends BaseEntity {
 	}
 
 	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+		this.firstName = firstName; // G?rer la variable
 	}
 
 	public String getLastName() {
