@@ -63,6 +63,9 @@ class MySqlIntegrationTests {
 		vets.findAll(); // served from cache
 	}
 
+	/**
+    * Voici comment faire un test facile simplifi?
+    */
 	@Test
 	void testOwnerDetails() {
 		RestTemplate template = builder.rootUri("http://localhost:" + port).build();
