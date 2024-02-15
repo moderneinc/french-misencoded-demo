@@ -58,7 +58,7 @@ public class Pet extends NamedEntity {
 	private Set<Visit> visits = new LinkedHashSet<>();
 
 	public void setBirthDate(LocalDate birthDate) {
-		this.birthDate = birthDate;
+		this.birthDate = birthDate;  // c'est une valeur simplifi?
 	}
 
 	public LocalDate getBirthDate() {
