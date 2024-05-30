@@ -17,6 +17,7 @@
 package org.springframework.samples.petclinic.owner;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatExceptionOfType;
 import static org.mockito.BDDMockito.given;
 
 import java.text.ParseException;
@@ -25,7 +26,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.DisabledInNativeImage;
@@ -70,7 +70,7 @@ class PetTypeFormatterTests {
 	@Test
 	void shouldThrowParseException() throws ParseException {
 		given(this.pets.findPetTypes()).willReturn(makePetTypes());
-		Assertions.assertThrows(ParseException.class, () -> {
+		assertThatExceptionOfType(ParseException.class).isThrownBy(() -> {
 			petTypeFormatter.parse("Fish", Locale.ENGLISH);
 		});
 	}
