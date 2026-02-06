@@ -1,0 +1,7 @@
+Source path,Class name,Simple name,Asset type,Description,Fields
+src/main/java/org/springframework/samples/petclinic/owner/Owner.java,org.springframework.samples.petclinic.owner.Owner,Owner,Entity,"Entity owner with fields: address, city, telephone, pets","address, city, telephone, pets"
+src/main/java/org/springframework/samples/petclinic/owner/Pet.java,org.springframework.samples.petclinic.owner.Pet,Pet,Entity,"Entity pet with fields: birthDate, type, visits","birthDate, type, visits"
+src/main/java/org/springframework/samples/petclinic/owner/PetType.java,org.springframework.samples.petclinic.owner.PetType,PetType,Entity,Entity pet type,
+src/main/java/org/springframework/samples/petclinic/owner/Visit.java,org.springframework.samples.petclinic.owner.Visit,Visit,Entity,"Entity visit with fields: date, description","date, description"
+src/main/java/org/springframework/samples/petclinic/vet/Specialty.java,org.springframework.samples.petclinic.vet.Specialty,Specialty,Entity,Entity specialty,
+src/main/java/org/springframework/samples/petclinic/vet/Vet.java,org.springframework.samples.petclinic.vet.Vet,Vet,Entity,Entity vet with fields: specialties,specialties

@@ -1,0 +1,9 @@
+Entity ID,Source path,Entity/Table name,Entity class,Repository class,Connection type,Database type
+entity:org.springframework.samples.petclinic.owner.Owner,src/main/java/org/springframework/samples/petclinic/owner/Owner.java,owners,org.springframework.samples.petclinic.owner.Owner,,JPA,
+repository:org.springframework.samples.petclinic.owner.OwnerRepository,src/main/java/org/springframework/samples/petclinic/owner/OwnerRepository.java,Owner,org.springframework.samples.petclinic.owner.Owner,org.springframework.samples.petclinic.owner.OwnerRepository,Spring Data JPA,
+entity:org.springframework.samples.petclinic.owner.Pet,src/main/java/org/springframework/samples/petclinic/owner/Pet.java,pets,org.springframework.samples.petclinic.owner.Pet,,JPA,
+entity:org.springframework.samples.petclinic.owner.PetType,src/main/java/org/springframework/samples/petclinic/owner/PetType.java,types,org.springframework.samples.petclinic.owner.PetType,,JPA,
+entity:org.springframework.samples.petclinic.owner.Visit,src/main/java/org/springframework/samples/petclinic/owner/Visit.java,visits,org.springframework.samples.petclinic.owner.Visit,,JPA,
+entity:org.springframework.samples.petclinic.vet.Specialty,src/main/java/org/springframework/samples/petclinic/vet/Specialty.java,specialties,org.springframework.samples.petclinic.vet.Specialty,,JPA,
+entity:org.springframework.samples.petclinic.vet.Vet,src/main/java/org/springframework/samples/petclinic/vet/Vet.java,vets,org.springframework.samples.petclinic.vet.Vet,,JPA,
+repository:org.springframework.samples.petclinic.vet.VetRepository,src/main/java/org/springframework/samples/petclinic/vet/VetRepository.java,Vet,org.springframework.samples.petclinic.vet.Vet,org.springframework.samples.petclinic.vet.VetRepository,Spring Data JPA,

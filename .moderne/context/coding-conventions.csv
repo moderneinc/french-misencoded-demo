@@ -1,0 +1,27 @@
+Convention type,Pattern,Example,Frequency,Scope
+comments,Classes have Javadoc documentation,PetClinicApplication,,project-wide
+naming,Base prefix for base classes,BaseEntity,,project-wide
+naming,get* method naming pattern,getId,,project-wide
+naming,set* method naming pattern,setId,,project-wide
+naming,is* method naming pattern,isNew,,project-wide
+comments,Methods have Javadoc documentation,getPet,,project-wide
+naming,Controller suffix for classes,OwnerController,,project-wide
+naming,UPPER_SNAKE_CASE for constants,VIEWS_OWNER_CREATE_OR_UPDATE_FORM,,project-wide
+naming,find* method naming pattern,findOwner,,project-wide
+naming,init* method naming pattern,initCreationForm,,project-wide
+naming,process* method naming pattern,processCreationForm,,project-wide
+naming,Repository suffix for classes,OwnerRepository,,project-wide
+naming,load* method naming pattern,loadPetWithVisit,,project-wide
+naming,Configuration suffix for classes,CacheConfiguration,,project-wide
+imports,Static imports from org.assertj.core.api,org.assertj.core.api.Assertions.assertThat,,project-wide
+naming,Tests suffix for classes,MySqlIntegrationTests,,project-wide
+imports,Static imports from org.junit.jupiter.api,org.junit.jupiter.api.Assumptions.assumeTrue,,project-wide
+naming,camelCase for constants,log,,project-wide
+naming,create* method naming pattern,createValidator,,project-wide
+naming,should* method naming pattern,shouldNotValidateWhenFirstNameEmpty,,project-wide
+imports,Static imports from org.hamcrest,org.hamcrest.Matchers.empty,,project-wide
+imports,Static imports from org.mockito,org.mockito.ArgumentMatchers.any,,project-wide
+imports,Static imports from org.springframework.test.web.servlet.request,org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get,,project-wide
+imports,Static imports from org.springframework.test.web.servlet.result,org.springframework.test.web.servlet.result.MockMvcResultMatchers.model,,project-wide
+naming,Utils suffix for classes,EntityUtils,,project-wide
+imports,Static imports from org.springframework.boot.test.context.SpringBootTest,org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT,,project-wide
