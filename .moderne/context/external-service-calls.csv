@@ -1,0 +1,4 @@
+Entity ID,Source path,Client class,Target service,Client type,Protocol,Base URL
+external:org.springframework.samples.petclinic.MySqlIntegrationTests,src/test/java/org/springframework/samples/petclinic/MySqlIntegrationTests.java,org.springframework.samples.petclinic.MySqlIntegrationTests,My Sql Integration Tests Service,Spring RestTemplate,,
+external:org.springframework.samples.petclinic.PetClinicIntegrationTests,src/test/java/org/springframework/samples/petclinic/PetClinicIntegrationTests.java,org.springframework.samples.petclinic.PetClinicIntegrationTests,Pet Clinic Integration Tests Service,Spring RestTemplate,,
+external:org.springframework.samples.petclinic.PostgresIntegrationTests,src/test/java/org/springframework/samples/petclinic/PostgresIntegrationTests.java,org.springframework.samples.petclinic.PostgresIntegrationTests,Postgres Integration Tests Service,Spring RestTemplate,,

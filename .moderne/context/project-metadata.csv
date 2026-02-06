@@ -1,0 +1,2 @@
+Source path,Artifact ID,Group ID,Name,Description,Version
+pom.xml,spring-javaformat-maven-plugin,io.spring.javaformat,m2e.version,,${lifecycle-mapping}
