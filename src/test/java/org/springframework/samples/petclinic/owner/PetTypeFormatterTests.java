@@ -70,9 +70,8 @@ class PetTypeFormatterTests {
 	@Test
 	void shouldThrowParseException() throws ParseException {
 		given(this.pets.findPetTypes()).willReturn(makePetTypes());
-		assertThatExceptionOfType(ParseException.class).isThrownBy(() -> {
-			petTypeFormatter.parse("Fish", Locale.ENGLISH);
-		});
+		assertThatExceptionOfType(ParseException.class).isThrownBy(() ->
+			petTypeFormatter.parse("Fish", Locale.ENGLISH));
 	}
 
 	/**
