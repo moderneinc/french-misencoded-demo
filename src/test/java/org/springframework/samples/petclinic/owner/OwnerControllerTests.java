@@ -16,19 +16,12 @@
 
 package org.springframework.samples.petclinic.owner;
 
-import static org.hamcrest.Matchers.empty;
-import static org.hamcrest.Matchers.hasProperty;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.not;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.ArgumentMatchers.eq;
+import static org.hamcrest.Matchers.*;
+import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -84,7 +77,7 @@ class OwnerControllerTests {
 		george.addPet(max);
 		max.setId(1);
 		return george;
-	};
+	}
 
 	@BeforeEach
 	void setup() {
@@ -142,14 +135,14 @@ class OwnerControllerTests {
 
 	@Test
 	void testProcessFindFormSuccess() throws Exception {
-		Page<Owner> tasks = new PageImpl<Owner>(Lists.newArrayList(george(), new Owner()));
+		Page<Owner> tasks = new PageImpl<>(Lists.newArrayList(george(), new Owner()));
 		Mockito.when(this.owners.findByLastName(anyString(), any(Pageable.class))).thenReturn(tasks);
 		mockMvc.perform(get("/owners?page=1")).andExpect(status().isOk()).andExpect(view().name("owners/ownersList"));
 	}
 
 	@Test
 	void testProcessFindFormByLastName() throws Exception {
-		Page<Owner> tasks = new PageImpl<Owner>(Lists.newArrayList(george()));
+		Page<Owner> tasks = new PageImpl<>(Lists.newArrayList(george()));
 		Mockito.when(this.owners.findByLastName(eq("Franklin"), any(Pageable.class))).thenReturn(tasks);
 		mockMvc.perform(get("/owners?page=1").param("lastName", "Franklin"))
 			.andExpect(status().is3xxRedirection())
@@ -158,7 +151,7 @@ class OwnerControllerTests {
 
 	@Test
 	void testProcessFindFormNoOwnersFound() throws Exception {
-		Page<Owner> tasks = new PageImpl<Owner>(Lists.newArrayList());
+		Page<Owner> tasks = new PageImpl<>(Lists.newArrayList());
 		Mockito.when(this.owners.findByLastName(eq("Unknown Surname"), any(Pageable.class))).thenReturn(tasks);
 		mockMvc.perform(get("/owners?page=1").param("lastName", "Unknown Surname"))
 			.andExpect(status().isOk())
@@ -231,10 +224,7 @@ class OwnerControllerTests {
 					@SuppressWarnings("unchecked")
 					List<Pet> pets = (List<Pet>) item;
 					Pet pet = pets.get(0);
-					if (pet.getVisits().isEmpty()) {
-						return false;
-					}
-					return true;
+					return !pet.getVisits().isEmpty();
 				}
 
 				@Override
